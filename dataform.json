@@ -1,0 +1,7 @@
+{
+  "defaultSchema": "reportingByDataform_HubspotSource",
+  "warehouse": "bigquery",
+  "defaultDatabase": "sample1-328718",
+  "defaultLocation": "US"
+}
+    
