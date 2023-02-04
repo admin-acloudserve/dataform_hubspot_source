@@ -9,13 +9,3 @@
 
 
     
-// cd **/seeds/
-// for d in * ; do
-//     FILE_NAME="$d"
-//     TABLENAME="${d%.*}"
-//     echo $FILE_NAME
-//     echo $TABLENAME
-
-//     echo "bq load --source_format=CSV --skip_leading_rows=1 --autodetect=true hubspot_source.${TABLENAME} ./${FILE_NAME}"
-//     bq load --source_format=CSV --skip_leading_rows=1 --autodetect=true hubspot_source.$TABLENAME ./$FILE_NAME
-// done
