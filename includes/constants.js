@@ -1,27 +1,12 @@
- const SOURCE_DATASET = "fivetran_log_copy";
+ const SOURCE_DATASET = "hubspot_copy";
  const SOURCE_PROJECT = "sample1-328718";
- const fivetran_log_using_sync_alert_messages = true
- const fivetran_log_using_transformations = false
- const fivetran_log_using_triggers = true
- const fivetran_log_using_account_membership = true
+ const hubspot_sales_enabled = true
+ const hubspot_company_enabled = true
+
  
  module.exports = { 
      SOURCE_DATASET, 
-     SOURCE_PROJECT, 
-     fivetran_log_using_sync_alert_messages, 
-     fivetran_log_using_transformations, 
-     fivetran_log_using_triggers, 
-     fivetran_log_using_account_membership 
+     SOURCE_PROJECT,
+     hubspot_sales_enabled,
+     hubspot_company_enabled
 };
-
-
-// cd **/seeds/
-// for d in * ; do
-//     FILE_NAME="$d"
-//     TABLENAME="${d%_data.*}"
-//     echo $FILE_NAME
-//     echo $TABLENAME
-
-//     echo "bq load --source_format=CSV --skip_leading_rows=1 --autodetect=true hubspot.${TABLENAME} ./${FILE_NAME}"
-//     bq load --source_format=CSV --skip_leading_rows=1 --autodetect=true hubspot.$TABLENAME ./$FILE_NAME
-// done
