@@ -8,6 +8,7 @@ const hubspot_contact_list_enabled = true
 const hubspot_contact_merge_audit_enabled = true
 const hubspot_contact_property_enabled = true
 const hubspot_contact_enabled = false
+const hubspot__company_pass_through_columns = []
 
 
 
@@ -22,5 +23,6 @@ const hubspot_contact_enabled = false
      hubspot_contact_list_enabled,
      hubspot_contact_merge_audit_enabled,
      hubspot_contact_property_enabled,
-     hubspot_contact_enabled
+     hubspot_contact_enabled,
+     hubspot__company_pass_through_columns
 };
