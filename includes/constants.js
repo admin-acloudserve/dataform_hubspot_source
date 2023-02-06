@@ -12,6 +12,19 @@ const hubspot__company_pass_through_columns = []
 const hubspot_deal_enabled = true
 const hubspot_deal_company_enabled = true
 const hubspot_deal_contact_enabled = true
+const hubspot_email_event_enabled = true
+const hubspot_email_event_bounce_enabled = true
+const hubspot_email_event_click_enabled = true
+const hubspot_email_event_deferred_enabled = true
+const hubspot_email_event_delivered_enabled = true
+const hubspot_email_event_dropped_enabled = true
+const hubspot_email_event_forward_enabled = true
+const hubspot_email_event_open_enabled = true
+const hubspot_email_event_print_enabled = true
+const hubspot_email_event_sent_enabled = true
+const hubspot_email_event_spam_report_enabled = true
+const hubspot_email_event_status_change_enabled = true
+
 
 
 
@@ -30,5 +43,17 @@ const hubspot_deal_contact_enabled = true
      hubspot__company_pass_through_columns,
      hubspot_deal_enabled,
      hubspot_deal_company_enabled,
-     hubspot_deal_contact_enabled
+     hubspot_deal_contact_enabled,
+     hubspot_email_event_enabled,
+     hubspot_email_event_bounce_enabled,
+     hubspot_email_event_click_enabled,
+     hubspot_email_event_deferred_enabled,
+     hubspot_email_event_delivered_enabled,
+     hubspot_email_event_dropped_enabled,
+     hubspot_email_event_forward_enabled,
+     hubspot_email_event_open_enabled,
+     hubspot_email_event_print_enabled,
+     hubspot_email_event_sent_enabled,
+     hubspot_email_event_spam_report_enabled,
+     hubspot_email_event_status_change_enabled
 };
