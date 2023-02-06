@@ -1,4 +1,20 @@
-{{ config(enabled=var('hubspot_service_enabled', False)) }}
+config {
+  type: "table"
+}
 
-select *
-from {{ var('ticket_property_history') }}
+
+js {
+
+  function run() {
+    if (fivetran_utils.enabled_vars([constants.hubspot_service_enabled]) == true ) {
+      query =  `
+        select * from ${constants.SOURCE_PROJECT}.${constants.SOURCE_DATASET}.ticket_property_history`
+      return query
+    }
+    return ``
+  }
+
+
+}
+
+${run()}

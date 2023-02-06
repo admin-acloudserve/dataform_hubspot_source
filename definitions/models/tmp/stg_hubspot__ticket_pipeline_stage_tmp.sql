@@ -1,4 +1,20 @@
-{{ config(enabled=var('hubspot_service_enabled', False)) }}
+config {
+  type: "table"
+}
 
-select * 
-from {{ var('ticket_pipeline_stage') }}
+
+js {
+
+  function run() {
+    if (fivetran_utils.enabled_vars([constants.hubspot_service_enabled]) == true ) {
+      query =  `
+        select * from ${constants.SOURCE_PROJECT}.${constants.SOURCE_DATASET}.ticket_pipeline_stage`
+      return query
+    }
+    return ``
+  }
+
+
+}
+
+${run()}
