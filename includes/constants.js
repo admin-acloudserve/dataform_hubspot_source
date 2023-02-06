@@ -24,7 +24,6 @@ const hubspot_email_event_print_enabled = true
 const hubspot_email_event_sent_enabled = true
 const hubspot_email_event_spam_report_enabled = true
 const hubspot_email_event_status_change_enabled = true
-
 const hubspot_engagement_enabled = true
 const hubspot_engagement_call_enabled = true
 const hubspot_engagement_company_enabled = true
@@ -34,6 +33,9 @@ const hubspot_engagement_email_enabled = true
 const hubspot_engagement_meeting_enabled = true
 const hubspot_engagement_note_enabled = true
 const hubspot_engagement_task_enabled = true
+const hubspot_owner_enabled = true
+const hubspot_service_enabled = true
+const hubspot_ticket_deal_enabled = true
 
 
 
@@ -76,7 +78,8 @@ const hubspot_engagement_task_enabled = true
      hubspot_engagement_email_enabled,
      hubspot_engagement_meeting_enabled,
      hubspot_engagement_note_enabled,
-     hubspot_engagement_task_enabled
-
-
+     hubspot_engagement_task_enabled,
+     hubspot_owner_enabled,
+     hubspot_service_enabled,
+     hubspot_ticket_deal_enabled
 };
