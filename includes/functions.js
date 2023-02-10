@@ -114,7 +114,6 @@ function get_contact_property_history_columns() {
 
 function get_deal_columns () {
     columns = [
-        {"name": "_fivetran_synced", "datatype": "TIMESTAMP"},
         {"name": "deal_id", "datatype": "INT64"},
         {"name": "deal_pipeline_id", "datatype": "STRING"},
         {"name": "deal_pipeline_stage_id", "datatype": "STRING"},

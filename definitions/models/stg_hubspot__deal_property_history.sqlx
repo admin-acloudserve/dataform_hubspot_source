@@ -1,0 +1,55 @@
+config {
+    type: "table"
+  }
+  
+  
+  js {
+  
+    function run() {
+      if (fivetran_utils.enabled_vars([constants.hubspot_sales_enabled, constants.hubspot_deal_enabled])) {
+        columns = fivetran_utils.fill_staging_columns(
+          functions.get_deal_property_history_columns()
+        )
+
+        query=`
+with base as (
+
+    select *
+    from ${ ref('stg_hubspot__deal_property_history_tmp') }
+
+), macro as (
+
+    select
+          ${columns} 
+    from base
+
+), fields as (
+
+    select
+        _fivetran_synced,
+        deal_id,
+        name as field_name,
+        source as change_source,
+        source_id as change_source_id,
+        change_timestamp, -- source field name = timestamp ; alias declared in macros/get_deal_property_history_columns.sql
+        value as new_value
+    from macro
+    
+)
+
+select *
+from fields
+`
+
+
+  
+        return query
+      }
+      return
+    }
+  
+  
+  }
+  
+  ${run()}
+  
