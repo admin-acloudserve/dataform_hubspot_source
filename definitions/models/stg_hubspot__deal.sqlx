@@ -30,7 +30,6 @@ with base as (
         property_closedate as closed_at,
         property_createdate as created_at,
         is_deleted as is_deal_deleted,
-        _fivetran_synced,
         deal_id,
         cast(deal_pipeline_id as STRING) as deal_pipeline_id,
         cast(deal_pipeline_stage_id as STRING) as deal_pipeline_stage_id,
