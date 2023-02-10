@@ -27,8 +27,7 @@ with base as (
 
     select
         company_id,
-        deal_id,
-        _fivetran_synced
+        deal_id
     from macro
     
 )
