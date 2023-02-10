@@ -133,7 +133,6 @@ function get_deal_columns () {
 
 function get_deal_company_columns() {
     columns = [
-        {"name": "_fivetran_synced", "datatype": "TIMESTAMP"},
         {"name": "deal_id", "datatype": "INT64"},
         {"name": "company_id", "datatype": "INT64"}
 
