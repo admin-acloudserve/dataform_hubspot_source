@@ -9,6 +9,9 @@ const hubspot_contact_merge_audit_enabled = true
 const hubspot_contact_property_enabled = true
 const hubspot_contact_enabled = false
 const hubspot__company_pass_through_columns = []
+const hubspot__contact_pass_through_columns = []
+const hubspot__deal_pass_through_columns = []
+const hubspot__ticket_pass_through_columns = []
 const hubspot_deal_enabled = true
 const hubspot_deal_company_enabled = true
 const hubspot_deal_contact_enabled = true
@@ -83,5 +86,9 @@ const hubspot__pass_through_all_columns = false
      hubspot_owner_enabled,
      hubspot_service_enabled,
      hubspot_ticket_deal_enabled,
-     hubspot__pass_through_all_columns
+     hubspot__pass_through_all_columns,
+     hubspot__contact_pass_through_columns,
+     hubspot__deal_pass_through_columns,
+     hubspot__ticket_pass_through_columns
+
 };
