@@ -172,7 +172,7 @@ function get_deal_pipeline_stage_columns() {
         {"name": "display_order", "datatype": "INT64"},
         {"name": "label", "datatype": "STRING"},
         {"name": "pipeline_id", "datatype": "STRING"},
-        {"name": "probability", "datatype": dbt.type_float()},
+        {"name": "probability", "datatype": "FLOAT64"},
         {"name": "stage_id", "datatype": "STRING"}
 
     ]
@@ -535,7 +535,7 @@ function get_engagement_task_columns() {
         {"name": "for_object_type", "datatype": "STRING"},
         {"name": "is_all_day", "datatype": "boolean"},
         {"name": "priority", "datatype": "STRING"},
-        {"name": "probability_to_complete", "datatype": dbt.type_float()},
+        {"name": "probability_to_complete", "datatype": "FLOAT64"},
         {"name": "status", "datatype": "STRING"},
         {"name": "subject", "datatype": "STRING"},
         {"name": "task_type", "datatype": "STRING"}
