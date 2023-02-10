@@ -36,6 +36,7 @@ const hubspot_engagement_task_enabled = true
 const hubspot_owner_enabled = true
 const hubspot_service_enabled = true
 const hubspot_ticket_deal_enabled = true
+const hubspot__pass_through_all_columns = false
 
 
 
@@ -81,5 +82,6 @@ const hubspot_ticket_deal_enabled = true
      hubspot_engagement_task_enabled,
      hubspot_owner_enabled,
      hubspot_service_enabled,
-     hubspot_ticket_deal_enabled
+     hubspot_ticket_deal_enabled,
+     hubspot__pass_through_all_columns
 };
