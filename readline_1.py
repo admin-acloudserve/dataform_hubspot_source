@@ -1,4 +1,4 @@
-file1 = open('/Users/shaunwang/Documents/gitlab/dataform_hubspot_source/includes/functions.js', 'r')
+file1 = open('/Users/zi/Documents/gitlab/dataform_hubspot_source/includes/functions.js', 'r')
 Lines = file1.readlines()
   
 count = 0
