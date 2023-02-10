@@ -19,3 +19,22 @@ function get_company_columns() {
 }
 
 
+function get_company_property_history_columns() {
+    columns = [
+        {"name": "_fivetran_synced", "datatype": "TIMESTAMP"},
+        {"name": "company_id", "datatype": "INT64"},
+        {"name": "name", "datatype": "STRING"},
+        {"name": "source", "datatype": "STRING"},
+        {"name": "source_id", "datatype": "STRING"},
+        {"name": "timestamp", "datatype": "TIMESTAMP", "alias": "change_timestamp"},
+        {"name": "value", "datatype": "STRING"}
+    ]
+    return columns
+}
+
+module.exports = { 
+     get_company_columns,
+     get_company_property_history_columns
+};
+
+
