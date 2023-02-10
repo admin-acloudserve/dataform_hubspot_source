@@ -1,0 +1,59 @@
+config {
+    type: "table"
+  }
+  
+  
+  js {
+  
+    function run() {
+      if (fivetran_utils.enabled_vars([constants.hubspot_marketing_enabled, constants.hubspot_email_event_enabled])) {
+        columns = fivetran_utils.fill_staging_columns(
+          functions.get_email_campaign_columns()
+        )
+
+        query=`
+with base as (
+
+    select *
+    from ${ ref('stg_hubspot__email_campaign_tmp') }
+
+), macro as (
+
+    select
+          ${columns} 
+    from base
+
+), fields as (
+
+    select
+        _fivetran_synced,
+        app_id,
+        app_name,
+        content_id,
+        id as email_campaign_id,
+        name as email_campaign_name,
+        num_included,
+        num_queued,
+        sub_type as email_campaign_sub_type,
+        subject as email_campaign_subject,
+        type as email_campaign_type
+    from macro
+    
+)
+
+select *
+from fields
+`
+
+
+  
+        return query
+      }
+      return
+    }
+  
+  
+  }
+  
+  ${run()}
+  
