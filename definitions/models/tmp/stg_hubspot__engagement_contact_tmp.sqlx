@@ -1,0 +1,20 @@
+config {
+  type: "table"
+}
+
+
+js {
+
+  function run() {
+    if (fivetran_utils.enabled_vars([constants.hubspot_sales_enabled, constants.hubspot_engagement_enabled, constants.hubspot_engagement_contact_enabled]) == true ) {
+      query =  `
+        select * from ${constants.SOURCE_PROJECT}.${constants.SOURCE_DATASET}.engagement_contact`
+      return query
+    }
+    return ``
+  }
+
+
+}
+
+${run()}
