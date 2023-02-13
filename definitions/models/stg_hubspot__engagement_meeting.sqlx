@@ -1,0 +1,55 @@
+config {
+    type: "table"
+  }
+  
+  js {
+  
+    function run() {
+      if (fivetran_utils.enabled_vars([constants.hubspot_sales_enabled, constants.hubspot_engagement_enabled, constants.hubspot_engagement_meeting_enabled])) {
+        columns = fivetran_utils.fill_staging_columns(
+          functions.get_engagement_meeting_columns()
+        )
+
+        query=`
+with base as (
+
+    select *
+    from ${ ref('stg_hubspot__engagement_meeting_tmp') }
+
+), macro as (
+
+    select
+          ${columns} 
+    from base
+
+), fields as (
+
+    select
+        _fivetran_synced,
+        body as meeting_notes,
+        created_from_link_id,
+        end_time as end_timestamp,
+        engagement_id,
+        external_url,
+        meeting_outcome,
+        pre_meeting_prospect_reminders,
+        source,
+        source_id,
+        start_time as start_timestamp,
+        title as meeting_title,
+        web_conference_meeting_id
+    from macro
+    
+)
+
+select *
+from fields
+`
+        return query
+      }
+      return
+    }
+  }
+  
+  ${run()}
+  
