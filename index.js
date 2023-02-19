@@ -17,7 +17,7 @@ module.exports = (params) => {
     // TODO: update files to call with params
     //   file_one: file_one(params),
     //   file_two: file_two(params)
-    stg_hubspot__company_property_history_tmp: stg_hubspot__company_property_history_tmp(params),
+      stg_hubspot__company_property_history_tmp: stg_hubspot__company_property_history_tmp(),
     };
 
     return result;
