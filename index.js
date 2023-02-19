@@ -40,7 +40,7 @@ const hubspot_owner_enabled = true
 const hubspot_service_enabled = true
 const hubspot_ticket_deal_enabled = true
 const hubspot__pass_through_all_columns = false
-const test_output = ref('stg_hubspot__email_event_bounce_tmp')
+const test_output = "${ ref('stg_hubspot__email_event_bounce_tmp') }"
 
 
 
