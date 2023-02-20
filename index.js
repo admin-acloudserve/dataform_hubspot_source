@@ -41,7 +41,7 @@ const hubspot_service_enabled = true
 const hubspot_ticket_deal_enabled = true
 const hubspot__pass_through_all_columns = false
 const test_output = "${ ref('stg_hubspot__email_event_bounce_tmp') }"
-
+const test_output2 = ref('stg_hubspot__contact_property_history_tmp')
 
 
 
@@ -91,6 +91,7 @@ const test_output = "${ ref('stg_hubspot__email_event_bounce_tmp') }"
      hubspot__contact_pass_through_columns,
      hubspot__deal_pass_through_columns,
      hubspot__ticket_pass_through_columns,
-     test_output
+     test_output,
+     test_output2
 
 };
